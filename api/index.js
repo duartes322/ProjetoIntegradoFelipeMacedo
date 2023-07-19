@@ -20,7 +20,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'));
 
-mongoose.connect('mongodb+srv://projetoaplicado:jTvQc3TQZWVgkKXy@cluster0.pt4f9fu.mongodb.net/?retryWrites=true&w=majority');
+mongoose.connect('mongodb+srv://projetoaplicado:<password>@cluster0.pt4f9fu.mongodb.net/?retryWrites=true&w=majority');
 
 app.post('/register', async (req,res) => {
     const{username, password, email, firstname, lastname, birthday, cep, number, complement} = req.body;
@@ -183,6 +183,3 @@ app.get('/cards', async (req,res) => {
 
 
 app.listen(4000);
-//projetoaplicado
-//mongodb+srv://projetoaplicado:jTvQc3TQZWVgkKXy@cluster0.pt4f9fu.mongodb.net/?retryWrites=true&w=majority
-//jTvQc3TQZWVgkKXy
